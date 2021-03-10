@@ -19,10 +19,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
-
-    //initilize logger
+- (void)initLogger {
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
 
@@ -31,7 +28,20 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
 
     [DDLog addLogger:fileLogger];
+}
 
+- (void)initWindow {
+    [self.window makeFirstResponder:self];
+    self.window.delegate = self;
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    // Insert code here to initialize your application
+
+    [self initLogger];
+    
+    [self initWindow];
+    
     DDLogInfo(@"applicationDidFinishLaunching");
 }
 

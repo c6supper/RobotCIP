@@ -7,6 +7,9 @@
 
 #import "AppDelegate.h"
 
+@import CocoaLumberjack;
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+
 @interface AppDelegate ()
 
 @property (strong) IBOutlet NSWindow *window;
@@ -18,6 +21,18 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+
+    //initilize logger
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+
+    [DDLog addLogger:fileLogger];
+
+    DDLogInfo(@"applicationDidFinishLaunching");
 }
 
 

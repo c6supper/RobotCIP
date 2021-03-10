@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		448D1CD425F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448D1CD325F8B7DE00B2D333 /* CocoaLumberjack.xcframework */; };
+		448D1CD525F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 448D1CD325F8B7DE00B2D333 /* CocoaLumberjack.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		448D1CD825F8B81D00B2D333 /* PureLayout.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448D1CD725F8B81D00B2D333 /* PureLayout.xcframework */; };
+		448D1CD925F8B81D00B2D333 /* PureLayout.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 448D1CD725F8B81D00B2D333 /* PureLayout.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		44E18E8425F774920012C76A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E18E8325F774920012C76A /* AppDelegate.m */; };
 		44E18E8725F774920012C76A /* RobotCIPGUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44E18E8525F774920012C76A /* RobotCIPGUI.xcdatamodeld */; };
 		44E18E8925F774940012C76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E18E8825F774940012C76A /* Assets.xcassets */; };
@@ -14,7 +18,24 @@
 		44E18E8F25F774940012C76A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E18E8E25F774940012C76A /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		448D1CD625F8B7DE00B2D333 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				448D1CD525F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Embed Frameworks */,
+				448D1CD925F8B81D00B2D333 /* PureLayout.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		448D1CD325F8B7DE00B2D333 /* CocoaLumberjack.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaLumberjack.xcframework; path = ../Carthage/Build/CocoaLumberjack.xcframework; sourceTree = "<group>"; };
+		448D1CD725F8B81D00B2D333 /* PureLayout.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PureLayout.xcframework; path = ../Carthage/Build/PureLayout.xcframework; sourceTree = "<group>"; };
 		44E18E7F25F774920012C76A /* RobotCIPGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotCIPGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E18E8225F774920012C76A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		44E18E8325F774920012C76A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -24,7 +45,6 @@
 		44E18E8D25F774940012C76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44E18E8E25F774940012C76A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44E18E9025F774940012C76A /* RobotCIPGUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RobotCIPGUI.entitlements; sourceTree = "<group>"; };
-		44E18EA225F7776D0012C76A /* macos-arm64_x86_64 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "macos-arm64_x86_64"; path = "../Carthage/Build/PureLayout.xcframework/macos-arm64_x86_64"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448D1CD425F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Frameworks */,
+				448D1CD825F8B81D00B2D333 /* PureLayout.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +95,8 @@
 		44E18E9725F775670012C76A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				44E18EA225F7776D0012C76A /* macos-arm64_x86_64 */,
+				448D1CD725F8B81D00B2D333 /* PureLayout.xcframework */,
+				448D1CD325F8B7DE00B2D333 /* CocoaLumberjack.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,7 +111,7 @@
 				44E18E7B25F774920012C76A /* Sources */,
 				44E18E7C25F774920012C76A /* Frameworks */,
 				44E18E7D25F774920012C76A /* Resources */,
-				44E18EA625F777EC0012C76A /* ShellScript */,
+				448D1CD625F8B7DE00B2D333 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,26 +164,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		44E18EA625F777EC0012C76A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd ../ && /usr/local/bin/carthage outdated --xcode-warnings 2>/dev/null\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44E18E7B25F774920012C76A /* Sources */ = {

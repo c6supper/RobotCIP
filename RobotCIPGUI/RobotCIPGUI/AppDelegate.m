@@ -6,13 +6,15 @@
 //
 
 #import "AppDelegate.h"
+#import "MainWindowController.h"
 
 @import CocoaLumberjack;
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 @interface AppDelegate ()
 
-@property (strong) IBOutlet NSWindow *window;
+@property (strong) MainWindowController *mainWindowController;
+
 - (IBAction)saveAction:(id)sender;
 
 @end
@@ -30,9 +32,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     [DDLog addLogger:fileLogger];
 }
 
-- (void)initWindow {
-    [self.window makeFirstResponder:self];
-    self.window.delegate = self;
+- (void)initWindowController {
+    _mainWindowController = [[MainWindowController alloc] init];
+    [_mainWindowController showWindow:nil];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -40,7 +42,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
     [self initLogger];
     
-    [self initWindow];
+    [self initWindowController];
     
     DDLogInfo(@"applicationDidFinishLaunching");
 }

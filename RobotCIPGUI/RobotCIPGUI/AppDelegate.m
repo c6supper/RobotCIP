@@ -11,6 +11,8 @@
 @import CocoaLumberjack;
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
+@import ThemeKit;
+
 @interface AppDelegate ()
 
 @property (strong) MainWindowController *mainWindowController;
@@ -37,12 +39,44 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     [_mainWindowController showWindow:nil];
 }
 
+- (void)initTheme {
+    /// Define default theme.
+    /// Used on first run. Default: `SystemTheme`.
+    /// Note: `SystemTheme` is a special theme that resolves to `ThemeManager.lightTheme` or `ThemeManager.darkTheme`,
+    /// depending on the macOS preference at 'System Preferences > General > Appearance'.
+    [TKThemeManager setDefaultTheme:TKThemeManager.lightTheme];
+    
+    /// Define window theme policy.
+    [TKThemeManager sharedManager].windowThemePolicy = TKThemeManagerWindowThemePolicyThemeAllWindows;
+    //[TKThemeManager sharedManager].windowThemePolicy = TKThemeManagerWindowThemePolicyThemeSomeWindows;
+    //[TKThemeManager sharedManager].themableWindowClasses = @[[MyWindow class]];
+    //[TKThemeManager sharedManager].windowThemePolicy = TKThemeManagerWindowThemePolicyDoNotThemeSomeWindows;
+    //[TKThemeManager sharedManager].notThemableWindowClasses = @[[NSPanel class]];
+    //[TKThemeManager sharedManager].windowThemePolicy = TKThemeManagerWindowThemePolicyDoNotThemeWindows;
+    
+    /// Enable & configure user themes.
+    /// Will use folder `(...)/Application Support/{your_app_bundle_id}/Themes`.
+    NSArray<NSString*>* applicationSupportURLs = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
+    NSURL* thisAppSupportURL = [[NSURL fileURLWithPath:applicationSupportURLs.firstObject] URLByAppendingPathComponent:[NSBundle mainBundle].bundleIdentifier];
+    NSURL* userThemesFolderURL = [thisAppSupportURL URLByAppendingPathComponent:@"Themes"];
+    [TKThemeManager sharedManager].userThemesFolderURL = userThemesFolderURL;
+    
+    /// Change the default light and dark theme, used when `SystemTheme` is selected.
+    //TKThemeManager.lightTheme = [[TKThemeManager sharedManager] themeWithIdentifier:PaperTheme.identifier];
+    //TKThemeManager.darkTheme = [[TKThemeManager sharedManager] themeWithIdentifier:@"com.luckymarmot.ThemeKit.PurpleGreen"];
+    
+    /// Apply last applied theme (or the default theme, if no previous one)
+    [[TKThemeManager sharedManager] applyLastOrDefaultTheme];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
 
     [self initLogger];
     
     [self initWindowController];
+
+    [self initTheme];
     
     DDLogInfo(@"applicationDidFinishLaunching");
 }

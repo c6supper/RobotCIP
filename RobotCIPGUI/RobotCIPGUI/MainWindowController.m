@@ -6,6 +6,7 @@
 //
 
 #import "MainWindowController.h"
+#import "MainWindow.h"
 
 @interface MainWindowController ()
 
@@ -20,10 +21,16 @@
 }
 
 - (void)loadWindow {
-    self.window = nil;
+    NSRect frame = NSMakeRect(100, 100, 400, 300);
+    self.window  = [[MainWindow alloc] initWithContentRect:frame
+                    styleMask:NSWindowStyleMaskBorderless
+                    backing:NSBackingStoreBuffered
+                    defer:NO];
+
 }
 
 - init {
+    self.shouldCascadeWindows = YES;
     return [self initWithWindowNibName:@""];
 }
 

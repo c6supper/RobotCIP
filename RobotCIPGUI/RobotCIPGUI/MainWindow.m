@@ -7,6 +7,11 @@
 
 #import "MainWindow.h"
 
+@interface MainWindow ()
+
+
+@end
+
 @implementation MainWindow
 
 @end

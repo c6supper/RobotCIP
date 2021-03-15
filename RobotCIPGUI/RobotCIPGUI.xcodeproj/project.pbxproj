@@ -15,6 +15,7 @@
 		448D1D0C25FB5D0300B2D333 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 448D1D0B25FB5D0300B2D333 /* MainWindow.m */; };
 		448D1D0E25FB643C00B2D333 /* ThemeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448D1D0D25FB643C00B2D333 /* ThemeKit.xcframework */; };
 		448D1D0F25FB643C00B2D333 /* ThemeKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 448D1D0D25FB643C00B2D333 /* ThemeKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		44C46A7625FF5CE500BBD433 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C46A7525FF5CE500BBD433 /* MainViewController.m */; };
 		44E18E8425F774920012C76A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E18E8325F774920012C76A /* AppDelegate.m */; };
 		44E18E8725F774920012C76A /* RobotCIPGUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44E18E8525F774920012C76A /* RobotCIPGUI.xcdatamodeld */; };
 		44E18E8925F774940012C76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E18E8825F774940012C76A /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		448D1D0A25FB5D0300B2D333 /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		448D1D0B25FB5D0300B2D333 /* MainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		448D1D0D25FB643C00B2D333 /* ThemeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ThemeKit.xcframework; path = ../Carthage/Build/ThemeKit.xcframework; sourceTree = "<group>"; };
+		44C46A7425FF5CE500BBD433 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = RobotCIPGUI/MainViewController.h; sourceTree = "<group>"; };
+		44C46A7525FF5CE500BBD433 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = RobotCIPGUI/MainViewController.m; sourceTree = "<group>"; };
 		44E18E7F25F774920012C76A /* RobotCIPGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotCIPGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E18E8225F774920012C76A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		44E18E8325F774920012C76A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 		44E18E7625F774920012C76A = {
 			isa = PBXGroup;
 			children = (
+				44C46A7425FF5CE500BBD433 /* MainViewController.h */,
+				44C46A7525FF5CE500BBD433 /* MainViewController.m */,
 				44E18E8125F774920012C76A /* RobotCIPGUI */,
 				44E18E8025F774920012C76A /* Products */,
 				44E18E9725F775670012C76A /* Frameworks */,
@@ -187,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44E18E8425F774920012C76A /* AppDelegate.m in Sources */,
+				44C46A7625FF5CE500BBD433 /* MainViewController.m in Sources */,
 				44E18E8F25F774940012C76A /* main.m in Sources */,
 				448D1D0C25FB5D0300B2D333 /* MainWindow.m in Sources */,
 				448D1D0625FA113600B2D333 /* MainWindowController.m in Sources */,

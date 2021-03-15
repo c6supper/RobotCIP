@@ -7,8 +7,11 @@
 
 #import "MainWindowController.h"
 #import "MainWindow.h"
+#import "MainViewController.h"
 
 @interface MainWindowController ()
+
+@property (strong) NSViewController *mainViewController;
 
 @end
 
@@ -21,8 +24,11 @@
 }
 
 - (void)loadWindow {
-    NSRect frame = NSMakeRect(100, 100, 400, 300);
-    self.window  = [[MainWindow alloc] initWithContentRect:frame
+    
+    self.mainViewController = [[MainViewController alloc] initWithNibName:nil bundle:nil];
+    self.mainViewController.view.frame = CGRectMake(0, 0, NSScreen.mainScreen.frame.size.width/2, NSScreen.mainScreen.frame.size.height/2);
+        
+    self.window  = [[MainWindow alloc] initWithContentRect:self.mainViewController.view.frame
                     styleMask:NSWindowStyleMaskBorderless
                     backing:NSBackingStoreBuffered
                     defer:NO];

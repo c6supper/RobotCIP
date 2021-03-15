@@ -26,13 +26,14 @@
 - (void)loadWindow {
     
     self.mainViewController = [[MainViewController alloc] initWithNibName:nil bundle:nil];
-    self.mainViewController.view.frame = CGRectMake(0, 0, NSScreen.mainScreen.frame.size.width/2, NSScreen.mainScreen.frame.size.height/2);
+    self.mainViewController.view.frame = CGRectMake(100, 100, NSScreen.mainScreen.frame.size.width/2, NSScreen.mainScreen.frame.size.height/2);
         
     self.window  = [[MainWindow alloc] initWithContentRect:self.mainViewController.view.frame
                     styleMask:NSWindowStyleMaskBorderless
                     backing:NSBackingStoreBuffered
                     defer:NO];
 
+    [self.window.contentView addSubview:self.mainViewController.view];
 }
 
 - init {

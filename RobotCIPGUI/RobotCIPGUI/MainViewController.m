@@ -61,7 +61,7 @@
     if (!_containerView) {
         _containerView = [NSView newAutoLayoutView];
         _containerView.wantsLayer = YES;
-        _containerView.layer.backgroundColor = [NSColor colorWithWhite:0.2 alpha:1].CGColor;
+        _containerView.layer.backgroundColor = [NSColor colorWithWhite:0.1 alpha:1].CGColor;
     }
     return _containerView;
 }

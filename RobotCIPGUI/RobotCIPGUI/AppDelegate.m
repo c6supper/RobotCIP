@@ -24,8 +24,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 @implementation AppDelegate
 
 - (void)initLogger {
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [DDLog addLogger:[DDOSLogger sharedInstance]];
+    //[[DDOSLogger sharedInstance] setColorsEnabled:YES];
 
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
     fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling

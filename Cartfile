@@ -3,3 +3,5 @@ github "PureLayout/PureLayout"
 github "CocoaLumberjack/CocoaLumberjack"
 
 github "luckymarmot/ThemeKit"
+
+github "ReactiveX/RxSwift" "6.1.0"

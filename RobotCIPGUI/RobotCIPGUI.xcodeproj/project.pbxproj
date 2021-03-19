@@ -21,6 +21,8 @@
 		44E18E8925F774940012C76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E18E8825F774940012C76A /* Assets.xcassets */; };
 		44E18E8C25F774940012C76A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E18E8A25F774940012C76A /* MainMenu.xib */; };
 		44E18E8F25F774940012C76A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E18E8E25F774940012C76A /* main.m */; };
+		44ED6D5F26044F1B00DA62C1 /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ED6D5E26044F1B00DA62C1 /* RxCocoa.xcframework */; };
+		44ED6D6026044F1B00DA62C1 /* RxCocoa.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44ED6D5E26044F1B00DA62C1 /* RxCocoa.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				448D1D0F25FB643C00B2D333 /* ThemeKit.xcframework in Embed Frameworks */,
+				44ED6D6026044F1B00DA62C1 /* RxCocoa.xcframework in Embed Frameworks */,
 				448D1CD525F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Embed Frameworks */,
 				448D1CD925F8B81D00B2D333 /* PureLayout.xcframework in Embed Frameworks */,
 			);
@@ -58,6 +61,7 @@
 		44E18E8D25F774940012C76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44E18E8E25F774940012C76A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44E18E9025F774940012C76A /* RobotCIPGUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RobotCIPGUI.entitlements; sourceTree = "<group>"; };
+		44ED6D5E26044F1B00DA62C1 /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxCocoa.xcframework; path = ../Carthage/Build/RxCocoa.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				448D1D0E25FB643C00B2D333 /* ThemeKit.xcframework in Frameworks */,
+				44ED6D5F26044F1B00DA62C1 /* RxCocoa.xcframework in Frameworks */,
 				448D1CD425F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Frameworks */,
 				448D1CD825F8B81D00B2D333 /* PureLayout.xcframework in Frameworks */,
 			);
@@ -115,6 +120,7 @@
 		44E18E9725F775670012C76A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44ED6D5E26044F1B00DA62C1 /* RxCocoa.xcframework */,
 				448D1D0D25FB643C00B2D333 /* ThemeKit.xcframework */,
 				448D1CD725F8B81D00B2D333 /* PureLayout.xcframework */,
 				448D1CD325F8B7DE00B2D333 /* CocoaLumberjack.xcframework */,

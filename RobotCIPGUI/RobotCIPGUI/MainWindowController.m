@@ -32,6 +32,8 @@
                     styleMask:NSWindowStyleMaskBorderless
                     backing:NSBackingStoreBuffered
                     defer:NO];
+                    
+    [self.window makeFirstResponder:self.mainViewController];
 
     [self.window.contentView addSubview:self.mainViewController.view];
 }

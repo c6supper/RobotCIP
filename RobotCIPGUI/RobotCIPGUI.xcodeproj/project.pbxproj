@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4474BE572609BB5900DA34E0 /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4474BE562609BB5900DA34E0 /* RxRelay.xcframework */; };
+		4474BE582609BB5900DA34E0 /* RxRelay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4474BE562609BB5900DA34E0 /* RxRelay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4474BE5A2609BC4800DA34E0 /* RxBlocking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4474BE592609BC4800DA34E0 /* RxBlocking.xcframework */; };
+		4474BE5B2609BC4800DA34E0 /* RxBlocking.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4474BE592609BC4800DA34E0 /* RxBlocking.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4474BE5C2609BC7000DA34E0 /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4474BE532609BAF600DA34E0 /* RxSwift.xcframework */; };
+		4474BE5D2609BC7000DA34E0 /* RxSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4474BE532609BAF600DA34E0 /* RxSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		448D1CD425F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448D1CD325F8B7DE00B2D333 /* CocoaLumberjack.xcframework */; };
 		448D1CD525F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 448D1CD325F8B7DE00B2D333 /* CocoaLumberjack.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		448D1CD825F8B81D00B2D333 /* PureLayout.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448D1CD725F8B81D00B2D333 /* PureLayout.xcframework */; };
@@ -35,6 +41,9 @@
 				448D1D0F25FB643C00B2D333 /* ThemeKit.xcframework in Embed Frameworks */,
 				44ED6D6026044F1B00DA62C1 /* RxCocoa.xcframework in Embed Frameworks */,
 				448D1CD525F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Embed Frameworks */,
+				4474BE582609BB5900DA34E0 /* RxRelay.xcframework in Embed Frameworks */,
+				4474BE5D2609BC7000DA34E0 /* RxSwift.xcframework in Embed Frameworks */,
+				4474BE5B2609BC4800DA34E0 /* RxBlocking.xcframework in Embed Frameworks */,
 				448D1CD925F8B81D00B2D333 /* PureLayout.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -43,6 +52,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4474BE532609BAF600DA34E0 /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwift.xcframework; path = ../Carthage/Build/RxSwift.xcframework; sourceTree = "<group>"; };
+		4474BE562609BB5900DA34E0 /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxRelay.xcframework; path = ../Carthage/Build/RxRelay.xcframework; sourceTree = "<group>"; };
+		4474BE592609BC4800DA34E0 /* RxBlocking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxBlocking.xcframework; path = ../Carthage/Build/RxBlocking.xcframework; sourceTree = "<group>"; };
 		448D1CD325F8B7DE00B2D333 /* CocoaLumberjack.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaLumberjack.xcframework; path = ../Carthage/Build/CocoaLumberjack.xcframework; sourceTree = "<group>"; };
 		448D1CD725F8B81D00B2D333 /* PureLayout.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PureLayout.xcframework; path = ../Carthage/Build/PureLayout.xcframework; sourceTree = "<group>"; };
 		448D1D0325FA113600B2D333 /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
@@ -72,6 +84,9 @@
 				448D1D0E25FB643C00B2D333 /* ThemeKit.xcframework in Frameworks */,
 				44ED6D5F26044F1B00DA62C1 /* RxCocoa.xcframework in Frameworks */,
 				448D1CD425F8B7DE00B2D333 /* CocoaLumberjack.xcframework in Frameworks */,
+				4474BE572609BB5900DA34E0 /* RxRelay.xcframework in Frameworks */,
+				4474BE5C2609BC7000DA34E0 /* RxSwift.xcframework in Frameworks */,
+				4474BE5A2609BC4800DA34E0 /* RxBlocking.xcframework in Frameworks */,
 				448D1CD825F8B81D00B2D333 /* PureLayout.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +135,9 @@
 		44E18E9725F775670012C76A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4474BE592609BC4800DA34E0 /* RxBlocking.xcframework */,
+				4474BE562609BB5900DA34E0 /* RxRelay.xcframework */,
+				4474BE532609BAF600DA34E0 /* RxSwift.xcframework */,
 				44ED6D5E26044F1B00DA62C1 /* RxCocoa.xcframework */,
 				448D1D0D25FB643C00B2D333 /* ThemeKit.xcframework */,
 				448D1CD725F8B81D00B2D333 /* PureLayout.xcframework */,

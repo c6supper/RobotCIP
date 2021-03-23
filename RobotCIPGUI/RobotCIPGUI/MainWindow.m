@@ -14,4 +14,9 @@
 
 @implementation MainWindow
 
+- (void)keyDown:(NSEvent *)event {
+    // Press any key to advance to the next demo
+    NSLog(@"asdfasdfasdf");
+}
+
 @end

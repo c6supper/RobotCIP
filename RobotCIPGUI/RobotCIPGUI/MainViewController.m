@@ -48,8 +48,7 @@ typedef NS_ENUM(NSInteger, ExampleConstraintDemo) {
     return YES;
 }
 
-- (void)keyDown:(NSEvent *)theEvent
-{
+- (void)keyDown:(NSEvent *)event {
     // Press any key to advance to the next demo
     [self nextDemo];
 }

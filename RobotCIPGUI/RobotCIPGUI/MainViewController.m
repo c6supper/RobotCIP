@@ -44,14 +44,15 @@ typedef NS_ENUM(NSInteger, ExampleConstraintDemo) {
     // Do view setup here.
 }
 
-- (BOOL)acceptsFirstResponder {
-    return YES;
-}
+// - (BOOL)acceptsFirstResponder {
+//     return YES;
+// }
 
-- (void)keyDown:(NSEvent *)event {
-    // Press any key to advance to the next demo
-    [self nextDemo];
-}
+// - (void)keyDown:(NSEvent *)event {
+//     // Press any key to advance to the next demo
+//     NSLog(@"%@", [NSThread callStackSymbols]);
+//     [self nextDemo];
+// }
 
 - (void)loadView
 {

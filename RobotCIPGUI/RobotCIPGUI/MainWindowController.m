@@ -29,13 +29,12 @@
     self.mainViewController.view.frame = CGRectMake(100, 100, NSScreen.mainScreen.frame.size.width/2, NSScreen.mainScreen.frame.size.height/2);
         
     self.window  = [[MainWindow alloc] initWithContentRect:self.mainViewController.view.frame
-                    styleMask:NSWindowStyleMaskBorderless
+                    styleMask:NSWindowStyleMaskTitled|NSWindowStyleMaskClosable|NSWindowStyleMaskMiniaturizable|NSWindowStyleMaskResizable
                     backing:NSBackingStoreBuffered
                     defer:NO];
+    [self.window makeKeyWindow];
 
     [self.window.contentView addSubview:self.mainViewController.view];
-    
-    [self.window makeFirstResponder:self.mainViewController];
 }
 
 - init {

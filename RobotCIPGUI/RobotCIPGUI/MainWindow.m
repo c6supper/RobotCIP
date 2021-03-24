@@ -19,4 +19,11 @@
     NSLog(@"asdfasdfasdf");
 }
 
+- (void)mouseDown:(NSEvent *)event {
+    // Press any key to advance to the next demo
+    NSLog(@"%@",self.firstResponder);
+    [self makeFirstResponder:nil];
+    [super mouseDown:event];
+}
+
 @end
